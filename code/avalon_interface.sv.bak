@@ -1,0 +1,55 @@
+module avalon_interface(
+	input logic [31:0] done,
+	input logic CLK,
+	input logic RESET,
+	input  logic AVL_READ,					
+	input  logic AVL_WRITE,					
+	input  logic AVL_CS,	
+	input  logic [3:0] AVL_BYTE_EN,		// Avalon-MM Byte Enable
+	input  logic [6:0] AVL_ADDR,			// Avalon-MM Address
+	input  logic [31:0] AVL_WRITEDATA,	// Avalon-MM Write Data
+	output logic [31:0] AVL_READDATA,	// Avalon-MM Read Data
+	output logic [31:0] register_file[128]
+
+	
+	
+);
+
+
+always_ff @ (posedge CLK) begin
+
+if(RESET) 
+	for(int i=0;i<128;i++)
+		rigister_file[i]<=32'b0;
+
+else if (AVL_WRITE & AVL_CS) begin
+	if(AVL_BYTE_EN[0]==1) 
+		rigister_file[AVL_ADDR][7:0]<=AVL_WRITEDATA[7:0];
+	if(AVL_BYTE_EN[1]==1) 
+		rigister_file[AVL_ADDR][15:8]<=AVL_WRITEDATA[15:8];
+	if(AVL_BYTE_EN[2]==1) 
+		rigister_file[AVL_ADDR][23:16]<=AVL_WRITEDATA[23:16];
+	if(AVL_BYTE_EN[3]==1) 
+		rigister_file[AVL_ADDR][31:24]<=AVL_WRITEDATA[31:24];
+end
+else register_file[127]<=done;
+
+end
+
+
+always_comb begin
+
+AVL_READDATA=32'b0;
+if (AVL_READ & AVL_CS) begin
+	AVL_READDATA=rigister_file[AVL_ADDR];
+
+
+end
+
+
+end	
+
+
+
+endmodule
+

@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Lycsama/Desktop/385final/mytest/lab8/Lab8_provided/simulation/modelsim
+vvga_clk
+Z1 !s110 1608254031
+!i10b 1
+!s100 OGlLO8;N^^k^>BA7[_bgn1
+IkFRa^:EVP=>Ec^NQHOL?63
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1512855278
+8C:/Users/Lycsama/Desktop/385final/mytest/lab8/Lab8_provided/vga_clk.v
+FC:/Users/Lycsama/Desktop/385final/mytest/lab8/Lab8_provided/vga_clk.v
+L0 40
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1608254031.000000
+!s107 C:/Users/Lycsama/Desktop/385final/mytest/lab8/Lab8_provided/vga_clk.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Lycsama/Desktop/385final/mytest/lab8/Lab8_provided|C:/Users/Lycsama/Desktop/385final/mytest/lab8/Lab8_provided/vga_clk.v|
+!i113 1
+Z5 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/Users/Lycsama/Desktop/385final/mytest/lab8/Lab8_provided
+Z6 tCvgOpt 0
+vvga_clk_altpll
+R1
+!i10b 1
+!s100 M:z4m=8?iG0fP6=5PXSTl1
+IY:z2Zb@O1eM@e0<be=j:h2
+R2
+R0
+w1605354568
+8C:/Users/Lycsama/Desktop/385final/mytest/lab8/Lab8_provided/db/vga_clk_altpll.v
+FC:/Users/Lycsama/Desktop/385final/mytest/lab8/Lab8_provided/db/vga_clk_altpll.v
+L0 29
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Lycsama/Desktop/385final/mytest/lab8/Lab8_provided/db/vga_clk_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Lycsama/Desktop/385final/mytest/lab8/Lab8_provided/db|C:/Users/Lycsama/Desktop/385final/mytest/lab8/Lab8_provided/db/vga_clk_altpll.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/Users/Lycsama/Desktop/385final/mytest/lab8/Lab8_provided/db
+R6

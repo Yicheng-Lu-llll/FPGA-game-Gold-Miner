@@ -1,0 +1,342 @@
+
+State Machine - |lab8|nios_system:nios_system|nios_system_sdram:sdram|m_next
+Name m_next.010000000 m_next.000010000 m_next.000001000 m_next.000000001 
+m_next.000000001 0 0 0 0 
+m_next.000001000 0 0 1 1 
+m_next.000010000 0 1 0 1 
+m_next.010000000 1 0 0 1 
+
+State Machine - |lab8|nios_system:nios_system|nios_system_sdram:sdram|m_state
+Name m_state.100000000 m_state.010000000 m_state.001000000 m_state.000100000 m_state.000010000 m_state.000001000 m_state.000000100 m_state.000000010 m_state.000000001 
+m_state.000000001 0 0 0 0 0 0 0 0 0 
+m_state.000000010 0 0 0 0 0 0 0 1 1 
+m_state.000000100 0 0 0 0 0 0 1 0 1 
+m_state.000001000 0 0 0 0 0 1 0 0 1 
+m_state.000010000 0 0 0 0 1 0 0 0 1 
+m_state.000100000 0 0 0 1 0 0 0 0 1 
+m_state.001000000 0 0 1 0 0 0 0 0 1 
+m_state.010000000 0 1 0 0 0 0 0 0 1 
+m_state.100000000 1 0 0 0 0 0 0 0 1 
+
+State Machine - |lab8|nios_system:nios_system|nios_system_sdram:sdram|i_next
+Name i_next.111 i_next.101 i_next.010 i_next.000 
+i_next.000 0 0 0 0 
+i_next.010 0 0 1 1 
+i_next.101 0 1 0 1 
+i_next.111 1 0 0 1 
+
+State Machine - |lab8|nios_system:nios_system|nios_system_sdram:sdram|i_state
+Name i_state.111 i_state.101 i_state.011 i_state.010 i_state.001 i_state.000 
+i_state.000 0 0 0 0 0 0 
+i_state.001 0 0 0 0 1 1 
+i_state.010 0 0 0 1 0 1 
+i_state.011 0 0 1 0 0 1 
+i_state.101 0 1 0 0 0 1 
+i_state.111 1 0 0 0 0 1 
+
+State Machine - |lab8|nios_system:nios_system|nios_system_nios2_gen2_0:nios2_gen2_0|nios_system_nios2_gen2_0_cpu:cpu|nios_system_nios2_gen2_0_cpu_nios2_oci:the_nios_system_nios2_gen2_0_cpu_nios2_oci|nios_system_nios2_gen2_0_cpu_debug_slave_wrapper:the_nios_system_nios2_gen2_0_cpu_debug_slave_wrapper|nios_system_nios2_gen2_0_cpu_debug_slave_tck:the_nios_system_nios2_gen2_0_cpu_debug_slave_tck|DRsize
+Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
+DRsize.000 0 0 0 0 0 0 
+DRsize.001 0 0 0 0 1 1 
+DRsize.010 0 0 0 1 0 1 
+DRsize.011 0 0 1 0 0 1 
+DRsize.100 0 1 0 0 0 1 
+DRsize.101 1 0 0 0 0 1 
+
+State Machine - |lab8|Target:Target_ins|Next_state
+Name Next_state.add 
+Next_state.finish 0 
+Next_state.add 1 
+
+State Machine - |lab8|Target:Target_ins|State
+Name State.add 
+State.finish 0 
+State.add 1 
+
+State Machine - |lab8|game_controller:game_controller_instance|State
+Name State.TARGET State.RANDOM State.SHOP_hold State.SHOP State.PASS_hold State.PASS State.FAIL State.COMPETITION State.DOUBLE State.SINGLE State.GAME_START 
+State.GAME_START 0 0 0 0 0 0 0 0 0 0 0 
+State.SINGLE 0 0 0 0 0 0 0 0 0 1 1 
+State.DOUBLE 0 0 0 0 0 0 0 0 1 0 1 
+State.COMPETITION 0 0 0 0 0 0 0 1 0 0 1 
+State.FAIL 0 0 0 0 0 0 1 0 0 0 1 
+State.PASS 0 0 0 0 0 1 0 0 0 0 1 
+State.PASS_hold 0 0 0 0 1 0 0 0 0 0 1 
+State.SHOP 0 0 0 1 0 0 0 0 0 0 1 
+State.SHOP_hold 0 0 1 0 0 0 0 0 0 0 1 
+State.RANDOM 0 1 0 0 0 0 0 0 0 0 1 
+State.TARGET 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |lab8|double:double_instance|show_explode:show_exploder_instance|State
+Name State.stay State.show2 State.show1 
+State.stay 0 0 0 
+State.show1 1 0 1 
+State.show2 1 1 0 
+
+State Machine - |lab8|double:double_instance|show_explode:show_explodel_instance|State
+Name State.stay State.show2 State.show1 
+State.stay 0 0 0 
+State.show1 1 0 1 
+State.show2 1 1 0 
+
+State Machine - |lab8|double:double_instance|smallstone_double:big_gold_instance14|State
+Name State.disappearl State.mover State.movel State.stay State.disappearr 
+State.stay 0 0 0 0 0 
+State.movel 0 0 1 1 0 
+State.mover 0 1 0 1 0 
+State.disappearl 1 0 0 1 0 
+State.disappearr 0 0 0 1 1 
+
+State Machine - |lab8|double:double_instance|smallstone_double:big_gold_instance13|State
+Name State.disappearl State.mover State.movel State.stay State.disappearr 
+State.stay 0 0 0 0 0 
+State.movel 0 0 1 1 0 
+State.mover 0 1 0 1 0 
+State.disappearl 1 0 0 1 0 
+State.disappearr 0 0 0 1 1 
+
+State Machine - |lab8|double:double_instance|smallstone_double:big_gold_instance12|State
+Name State.disappearl State.mover State.movel State.stay State.disappearr 
+State.stay 0 0 0 0 0 
+State.movel 0 0 1 1 0 
+State.mover 0 1 0 1 0 
+State.disappearl 1 0 0 1 0 
+State.disappearr 0 0 0 1 1 
+
+State Machine - |lab8|double:double_instance|smallstone_double:big_gold_instance11|State
+Name State.disappearl State.mover State.movel State.stay State.disappearr 
+State.stay 0 0 0 0 0 
+State.movel 0 0 1 1 0 
+State.mover 0 1 0 1 0 
+State.disappearl 1 0 0 1 0 
+State.disappearr 0 0 0 1 1 
+
+State Machine - |lab8|double:double_instance|smallstone_double:big_gold_instance10|State
+Name State.disappearl State.mover State.movel State.stay State.disappearr 
+State.stay 0 0 0 0 0 
+State.movel 0 0 1 1 0 
+State.mover 0 1 0 1 0 
+State.disappearl 1 0 0 1 0 
+State.disappearr 0 0 0 1 1 
+
+State Machine - |lab8|double:double_instance|daimond_double:big_gold_instance9|State
+Name State.disappearl State.mover State.movel State.stay State.disappearr 
+State.stay 0 0 0 0 0 
+State.movel 0 0 1 1 0 
+State.mover 0 1 0 1 0 
+State.disappearl 1 0 0 1 0 
+State.disappearr 0 0 0 1 1 
+
+State Machine - |lab8|double:double_instance|bigstone_double:big_gold_instance8|State
+Name State.disappearl State.mover State.movel State.stay State.disappearr 
+State.stay 0 0 0 0 0 
+State.movel 0 0 1 1 0 
+State.mover 0 1 0 1 0 
+State.disappearl 1 0 0 1 0 
+State.disappearr 0 0 0 1 1 
+
+State Machine - |lab8|double:double_instance|bigstone_double:big_gold_instance7|State
+Name State.disappearl State.mover State.movel State.stay State.disappearr 
+State.stay 0 0 0 0 0 
+State.movel 0 0 1 1 0 
+State.mover 0 1 0 1 0 
+State.disappearl 1 0 0 1 0 
+State.disappearr 0 0 0 1 1 
+
+State Machine - |lab8|double:double_instance|small_gold_double:big_gold_instance6|State
+Name State.disappearl State.mover State.movel State.stay State.disappearr 
+State.stay 0 0 0 0 0 
+State.movel 0 0 1 1 0 
+State.mover 0 1 0 1 0 
+State.disappearl 1 0 0 1 0 
+State.disappearr 0 0 0 1 1 
+
+State Machine - |lab8|double:double_instance|small_gold_double:big_gold_instance5|State
+Name State.disappearl State.mover State.movel State.stay State.disappearr 
+State.stay 0 0 0 0 0 
+State.movel 0 0 1 1 0 
+State.mover 0 1 0 1 0 
+State.disappearl 1 0 0 1 0 
+State.disappearr 0 0 0 1 1 
+
+State Machine - |lab8|double:double_instance|middle_gold_double:big_gold_instance4|State
+Name State.disappearl State.mover State.movel State.stay State.disappearr 
+State.stay 0 0 0 0 0 
+State.movel 0 0 1 1 0 
+State.mover 0 1 0 1 0 
+State.disappearl 1 0 0 1 0 
+State.disappearr 0 0 0 1 1 
+
+State Machine - |lab8|double:double_instance|middle_gold_double:big_gold_instance3|State
+Name State.disappearl State.mover State.movel State.stay State.disappearr 
+State.stay 0 0 0 0 0 
+State.movel 0 0 1 1 0 
+State.mover 0 1 0 1 0 
+State.disappearl 1 0 0 1 0 
+State.disappearr 0 0 0 1 1 
+
+State Machine - |lab8|double:double_instance|big_gold_double:big_gold_instance2|State
+Name State.disappearl State.mover State.movel State.stay State.disappearr 
+State.stay 0 0 0 0 0 
+State.movel 0 0 1 1 0 
+State.mover 0 1 0 1 0 
+State.disappearl 1 0 0 1 0 
+State.disappearr 0 0 0 1 1 
+
+State Machine - |lab8|double:double_instance|big_gold_double:big_gold_instance1|State
+Name State.disappearl State.mover State.movel State.stay State.disappearr 
+State.stay 0 0 0 0 0 
+State.movel 0 0 1 1 0 
+State.mover 0 1 0 1 0 
+State.disappearl 1 0 0 1 0 
+State.disappearr 0 0 0 1 1 
+
+State Machine - |lab8|double:double_instance|hook_right:hook_right_instance|State
+Name State.SHRINK State.EXTENSION State.ROTATE2 State.ROTATE1 
+State.ROTATE1 0 0 0 0 
+State.ROTATE2 0 0 1 1 
+State.EXTENSION 0 1 0 1 
+State.SHRINK 1 0 0 1 
+
+State Machine - |lab8|double:double_instance|hook_left:hook_left_instance|State
+Name State.SHRINK State.EXTENSION State.ROTATE2 State.ROTATE1 
+State.ROTATE1 0 0 0 0 
+State.ROTATE2 0 0 1 1 
+State.EXTENSION 0 1 0 1 
+State.SHRINK 1 0 0 1 
+
+State Machine - |lab8|single:single_instance|show_explode:show_explode_instance|State
+Name State.stay State.show2 State.show1 
+State.stay 0 0 0 
+State.show1 1 0 1 
+State.show2 1 1 0 
+
+State Machine - |lab8|single:single_instance|smallstone:big_gold_instance14|State
+Name State.stay State.disappear State.move 
+State.stay 0 0 0 
+State.move 1 0 1 
+State.disappear 1 1 0 
+
+State Machine - |lab8|single:single_instance|smallstone:big_gold_instance13|State
+Name State.stay State.disappear State.move 
+State.stay 0 0 0 
+State.move 1 0 1 
+State.disappear 1 1 0 
+
+State Machine - |lab8|single:single_instance|bigstone:big_gold_instance12|State
+Name State.stay State.disappear State.move 
+State.stay 0 0 0 
+State.move 1 0 1 
+State.disappear 1 1 0 
+
+State Machine - |lab8|single:single_instance|bigstone:big_gold_instance11|State
+Name State.stay State.disappear State.move 
+State.stay 0 0 0 
+State.move 1 0 1 
+State.disappear 1 1 0 
+
+State Machine - |lab8|single:single_instance|smallstone:big_gold_instance10|State
+Name State.stay State.disappear State.move 
+State.stay 0 0 0 
+State.move 1 0 1 
+State.disappear 1 1 0 
+
+State Machine - |lab8|single:single_instance|daimond:big_gold_instance9|State
+Name State.stay State.disappear State.move 
+State.stay 0 0 0 
+State.move 1 0 1 
+State.disappear 1 1 0 
+
+State Machine - |lab8|single:single_instance|bigstone:big_gold_instance8|State
+Name State.stay State.disappear State.move 
+State.stay 0 0 0 
+State.move 1 0 1 
+State.disappear 1 1 0 
+
+State Machine - |lab8|single:single_instance|bigstone:big_gold_instance7|State
+Name State.stay State.disappear State.move 
+State.stay 0 0 0 
+State.move 1 0 1 
+State.disappear 1 1 0 
+
+State Machine - |lab8|single:single_instance|small_gold:big_gold_instance6|State
+Name State.stay State.disappear State.move 
+State.stay 0 0 0 
+State.move 1 0 1 
+State.disappear 1 1 0 
+
+State Machine - |lab8|single:single_instance|small_gold:big_gold_instance5|State
+Name State.stay State.disappear State.move 
+State.stay 0 0 0 
+State.move 1 0 1 
+State.disappear 1 1 0 
+
+State Machine - |lab8|single:single_instance|middle_gold:big_gold_instance4|State
+Name State.stay State.disappear State.move 
+State.stay 0 0 0 
+State.move 1 0 1 
+State.disappear 1 1 0 
+
+State Machine - |lab8|single:single_instance|middle_gold:big_gold_instance3|State
+Name State.stay State.disappear State.move 
+State.stay 0 0 0 
+State.move 1 0 1 
+State.disappear 1 1 0 
+
+State Machine - |lab8|single:single_instance|big_gold:big_gold_instance2|State
+Name State.stay State.disappear State.move 
+State.stay 0 0 0 
+State.move 1 0 1 
+State.disappear 1 1 0 
+
+State Machine - |lab8|single:single_instance|big_gold:big_gold_instance1|State
+Name State.stay State.disappear State.move 
+State.stay 0 0 0 
+State.move 1 0 1 
+State.disappear 1 1 0 
+
+State Machine - |lab8|single:single_instance|hook:hook_instance|State
+Name State.SHRINK State.EXTENSION State.ROTATE2 State.ROTATE1 
+State.ROTATE1 0 0 0 0 
+State.ROTATE2 0 0 1 1 
+State.EXTENSION 0 1 0 1 
+State.SHRINK 1 0 0 1 
+
+State Machine - |lab8|Pass:pass_instance|Next_state
+Name Next_state.show 
+Next_state.finish 0 
+Next_state.show 1 
+
+State Machine - |lab8|Pass:pass_instance|State
+Name State.show 
+State.finish 0 
+State.show 1 
+
+State Machine - |lab8|Game_start:Game_start_instance|State
+Name State.finish State.competition_hold State.competition State.double State.single_hold State.single 
+State.single 0 0 0 0 0 0 
+State.single_hold 0 0 0 0 1 1 
+State.double 0 0 0 1 0 1 
+State.competition 0 0 1 0 0 1 
+State.competition_hold 0 1 0 0 0 1 
+State.finish 1 0 0 0 0 1 
+
+State Machine - |lab8|color_mapper_manager:color_mapper_manager_instance|State
+Name State.color_mapper_TARGET State.color_mapper_SHOP State.color_mapper_PASS State.color_mapper_FAIL State.color_mapper_COMPETITION State.color_mapper_DOUBLE State.color_mapper_SINGLE State.color_mapper_GAME_START 
+State.color_mapper_GAME_START 0 0 0 0 0 0 0 0 
+State.color_mapper_SINGLE 0 0 0 0 0 0 1 1 
+State.color_mapper_DOUBLE 0 0 0 0 0 1 0 1 
+State.color_mapper_COMPETITION 0 0 0 0 1 0 0 1 
+State.color_mapper_FAIL 0 0 0 1 0 0 0 1 
+State.color_mapper_PASS 0 0 1 0 0 0 0 1 
+State.color_mapper_SHOP 0 1 0 0 0 0 0 1 
+State.color_mapper_TARGET 1 0 0 0 0 0 0 1 
+
+State Machine - |lab8|shop:shop_instance|State
+Name State.finish State.next_hold State.bomb_hold State.next State.water State.bomb 
+State.bomb 0 0 0 0 0 0 
+State.water 0 0 0 0 1 1 
+State.next 0 0 0 1 0 1 
+State.bomb_hold 0 0 1 0 0 1 
+State.next_hold 0 1 0 0 0 1 
+State.finish 1 0 0 0 0 1 

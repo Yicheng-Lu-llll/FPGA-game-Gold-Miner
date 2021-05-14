@@ -1,0 +1,9 @@
+23:03:31 **** Incremental Build of configuration Nios II for project usb ****
+make all 
+Info: Building ../usb_bsp/
+D:/quartus/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../usb_bsp/
+[BSP build complete]
+[usb build complete]
+
+23:03:32 Build Finished (took 1s.782ms)
+

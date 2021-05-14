@@ -1,0 +1,94 @@
+//-------------------------------------------------------------------------
+//      testbench_week2.sv                                               --
+//                                                                       --
+//      Created 3-23-2020 by Heyuan Li                                   --
+//      Modified 4-3-2020 by Heyuan Li                                   --
+//               changed control signals to active low, changed some     --
+//               variable names to accomodate to ZJUI requirements       --
+//                        Spring 2020 Distribution                       --
+//                                                                       --
+//      For use with ECE 385 Experment 6                                 --
+//      ZJUI Institute                                                   --
+//-------------------------------------------------------------------------
+// IMPORTANT:
+// 1. This testbench for week 2 requires about 280 us(microsecond) to run,
+// so please set the simulation period to be AT LEAST 280 us.
+//
+// 2. The function of each test is sensitive to the delay time of each operation.
+// During debugging, it is okay to add operations, but please DO NOT change the 
+// delay time of those existing operations. Otherwise, TAs may have trouble finding
+// the desired results, as well as giving you credits on that.
+//
+// 3. It is encouraged to run tests following their orders, rather than running all
+// at once,  for the sake of debugging. For example, you can start from running the
+// first test. Then, uncomment the second test to run the first and the second test
+// together, etc.
+// Or, you may choose to run one of them by commenting the others, since the results
+// of each test are independent of the other tests. Though, as the lab manual suggests,
+// it is only your slc3 runs earlier tests correctly that it can run the later tests
+// correctly.
+//
+// In case you do not know how to set the simulation period, here are the steps
+// step 1: in [Assignments] tab choose [Settings...]
+// step 2: under [EDA Tool Settings] tab choose [Simulation]
+// step 3: find the [Test Benches...] button and click it
+// step 4: in the pop up window, choose "testbench_week2.sv" and click [Edit...]
+//         if you cannot find this testbench, please add this first
+// step 5: in the pop up window, choose the [End Simulation at:] circle box and 
+//         enter the desired simulation time
+//
+//
+// 
+
+module testbench_week2();
+
+// half clock cycle at 50 MHz
+// this is the amount of time represented by #1 delay
+timeunit 10ns;
+timeprecision 1ns;
+
+
+logic clk;
+logic RESET;
+
+logic AES_START;
+logic AES_DONE;
+logic [127:0] AES_KEY=128'h000102030405060708090a0b0c0d0e0f;
+logic [127:0] AES_MSG_ENC=128'hdaec3055df058e1c39e814ea76f6747e;
+logic [127:0] AES_MSG_DEC;
+
+
+
+
+	
+	// initialize the toplevel entity
+AES test(.CLK(clk), .*);
+	
+	// set clock rule
+   always begin : CLOCK_GENERATION 
+		#1 clk = ~clk;
+   end
+
+	
+
+
+
+	// initialize clock signal 
+	initial begin: CLOCK_INITIALIZATION 
+		clk = 0;
+   end
+	
+	// begin testing
+	initial begin: TEST_VECTORS
+		RESET=1;
+		#2
+		RESET=0;
+		AES_START=1;
+	   #1000;
+		
+	
+	
+
+	end
+	 
+endmodule

@@ -1,0 +1,23 @@
+module fail_or_pass(
+								input Clk, 
+								input logic [9:0] DrawX, DrawY,
+								input logic is_fail,   
+								output logic display_shop,
+								output logic[3:0] go_to_shop_or_fail_index
+
+
+);
+
+
+
+parameter [9:0] SCREEN_WIDTH =  10'd480;
+parameter [9:0] SCREEN_LENGTH = 10'd640;
+logic [18:0] read_address;
+
+always_comb begin
+
+read_address=  (DrawY/2) *(  SCREEN_LENGTH/2)  +  (DrawX/2);
+
+
+end
+

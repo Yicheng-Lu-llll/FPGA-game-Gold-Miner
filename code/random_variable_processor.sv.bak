@@ -1,0 +1,89 @@
+module random_variable_processor(
+
+
+
+input logic [31:0] position0,
+input logic [31:0] position1,
+input logic [31:0] position2,
+input logic [31:0] position3,
+input logic [31:0] position4,
+input logic [31:0] position5,
+input logic [31:0] position6,
+input logic [31:0] position7,
+input logic [31:0] position8,
+input logic [31:0] position9,
+input logic [31:0] position10,
+input logic [31:0] position11,
+input logic [31:0] position12,
+input logic [31:0] position13,
+input logic [31:0] position14,
+input logic [31:0] position15,
+input logic [31:0] position16,
+input logic [31:0] position17,
+input logic [31:0] position18,
+input logic [31:0] position19,
+input logic [31:0] position20,
+logic [31:0] is_new_game_start,
+
+
+
+
+
+output logic [9:0] goldx1,
+output logic [9:0] goldy1,
+
+
+output logic [9:0] goldx2,
+output logic [9:0] goldy2
+
+);
+
+always_ff@ (posedge Clk)begin
+
+goldy1
+goldy1
+goldy2
+goldy2
+
+
+if (is_new_game_start==1) begin
+
+
+
+	goldx1<=position0 %640;
+	goldx2<=position0 %640;
+	
+	
+	goldy1<=position0 %380 +100;
+	goldy2<=position0 %380 +100;
+	
+
+
+	end 
+	
+
+else begin
+	
+	goldx1<=goldx1;
+	goldx2<=goldx2;
+	
+	
+	goldy1<=goldy1;
+	goldy2<=goldy2;
+	
+
+	end
+
+
+
+
+
+
+
+
+
+
+end
+
+
+endmodule

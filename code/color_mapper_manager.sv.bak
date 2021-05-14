@@ -1,0 +1,44 @@
+module  color_mapper_manager (
+									input logic clk,
+									input logic [9:0] DrawX, DrawY,
+									
+									
+									
+							
+									output logic [7:0] VGA_R, VGA_G, VGA_B 
+
+                     );
+
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+endmodule
+							

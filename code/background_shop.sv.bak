@@ -1,0 +1,11 @@
+module background_shop(
+								input Clk, 
+								input logic [9:0] DrawX, DrawY,
+								output logic is_background_shop,
+								output logic[3:0] background_shop_index
+
+
+
+
+
+);

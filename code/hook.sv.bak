@@ -1,0 +1,9 @@
+module hook(
+								input Clk, 
+								input logic [9:0] DrawX, DrawY,
+								input logic [9:0] goldx,goldy,
+								output logic is_big_gold,
+								output logic[3:0] big_gold_index
+
+
+);

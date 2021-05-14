@@ -1,0 +1,1603 @@
+/*
+ * system.h - SOPC Builder system and BSP software package information
+ *
+ * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'nios_system'
+ * SOPC Builder design path: ../../nios_system.sopcinfo
+ *
+ * Generated: Sat Dec 26 19:05:03 GMT+08:00 2020
+ */
+
+/*
+ * DO NOT MODIFY THIS FILE
+ *
+ * Changing this file will have subtle consequences
+ * which will almost certainly lead to a nonfunctioning
+ * system. If you do modify this file, be aware that your
+ * changes will be overwritten and lost when this file
+ * is generated again.
+ *
+ * DO NOT MODIFY THIS FILE
+ */
+
+/*
+ * License Agreement
+ *
+ * Copyright (c) 2008
+ * Altera Corporation, San Jose, California, USA.
+ * All rights reserved.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a
+ * copy of this software and associated documentation files (the "Software"),
+ * to deal in the Software without restriction, including without limitation
+ * the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+ * DEALINGS IN THE SOFTWARE.
+ *
+ * This agreement shall be governed in all respects by the laws of the State
+ * of California and by the laws of the United States of America.
+ */
+
+#ifndef __SYSTEM_H_
+#define __SYSTEM_H_
+
+/* Include definitions from linker script generator */
+#include "linker.h"
+
+
+/*
+ * CPU configuration
+ *
+ */
+
+#define ALT_CPU_ARCHITECTURE "altera_nios2_gen2"
+#define ALT_CPU_BIG_ENDIAN 0
+#define ALT_CPU_BREAK_ADDR 0x00001020
+#define ALT_CPU_CPU_ARCH_NIOS2_R1
+#define ALT_CPU_CPU_FREQ 50000000u
+#define ALT_CPU_CPU_ID_SIZE 1
+#define ALT_CPU_CPU_ID_VALUE 0x00000000
+#define ALT_CPU_CPU_IMPLEMENTATION "tiny"
+#define ALT_CPU_DATA_ADDR_WIDTH 0x1d
+#define ALT_CPU_DCACHE_LINE_SIZE 0
+#define ALT_CPU_DCACHE_LINE_SIZE_LOG2 0
+#define ALT_CPU_DCACHE_SIZE 0
+#define ALT_CPU_EXCEPTION_ADDR 0x10000020
+#define ALT_CPU_FLASH_ACCELERATOR_LINES 0
+#define ALT_CPU_FLASH_ACCELERATOR_LINE_SIZE 0
+#define ALT_CPU_FLUSHDA_SUPPORTED
+#define ALT_CPU_FREQ 50000000
+#define ALT_CPU_HARDWARE_DIVIDE_PRESENT 0
+#define ALT_CPU_HARDWARE_MULTIPLY_PRESENT 0
+#define ALT_CPU_HARDWARE_MULX_PRESENT 0
+#define ALT_CPU_HAS_DEBUG_CORE 1
+#define ALT_CPU_HAS_DEBUG_STUB
+#define ALT_CPU_HAS_ILLEGAL_INSTRUCTION_EXCEPTION
+#define ALT_CPU_HAS_JMPI_INSTRUCTION
+#define ALT_CPU_ICACHE_LINE_SIZE 0
+#define ALT_CPU_ICACHE_LINE_SIZE_LOG2 0
+#define ALT_CPU_ICACHE_SIZE 0
+#define ALT_CPU_INST_ADDR_WIDTH 0x1d
+#define ALT_CPU_NAME "nios2_gen2_0"
+#define ALT_CPU_OCI_VERSION 1
+#define ALT_CPU_RESET_ADDR 0x10000000
+
+
+/*
+ * CPU configuration (with legacy prefix - don't use these anymore)
+ *
+ */
+
+#define NIOS2_BIG_ENDIAN 0
+#define NIOS2_BREAK_ADDR 0x00001020
+#define NIOS2_CPU_ARCH_NIOS2_R1
+#define NIOS2_CPU_FREQ 50000000u
+#define NIOS2_CPU_ID_SIZE 1
+#define NIOS2_CPU_ID_VALUE 0x00000000
+#define NIOS2_CPU_IMPLEMENTATION "tiny"
+#define NIOS2_DATA_ADDR_WIDTH 0x1d
+#define NIOS2_DCACHE_LINE_SIZE 0
+#define NIOS2_DCACHE_LINE_SIZE_LOG2 0
+#define NIOS2_DCACHE_SIZE 0
+#define NIOS2_EXCEPTION_ADDR 0x10000020
+#define NIOS2_FLASH_ACCELERATOR_LINES 0
+#define NIOS2_FLASH_ACCELERATOR_LINE_SIZE 0
+#define NIOS2_FLUSHDA_SUPPORTED
+#define NIOS2_HARDWARE_DIVIDE_PRESENT 0
+#define NIOS2_HARDWARE_MULTIPLY_PRESENT 0
+#define NIOS2_HARDWARE_MULX_PRESENT 0
+#define NIOS2_HAS_DEBUG_CORE 1
+#define NIOS2_HAS_DEBUG_STUB
+#define NIOS2_HAS_ILLEGAL_INSTRUCTION_EXCEPTION
+#define NIOS2_HAS_JMPI_INSTRUCTION
+#define NIOS2_ICACHE_LINE_SIZE 0
+#define NIOS2_ICACHE_LINE_SIZE_LOG2 0
+#define NIOS2_ICACHE_SIZE 0
+#define NIOS2_INST_ADDR_WIDTH 0x1d
+#define NIOS2_OCI_VERSION 1
+#define NIOS2_RESET_ADDR 0x10000000
+
+
+/*
+ * Define for each module class mastered by the CPU
+ *
+ */
+
+#define __ALTERA_AVALON_JTAG_UART
+#define __ALTERA_AVALON_NEW_SDRAM_CONTROLLER
+#define __ALTERA_AVALON_ONCHIP_MEMORY2
+#define __ALTERA_AVALON_PIO
+#define __ALTERA_AVALON_SYSID_QSYS
+#define __ALTERA_NIOS2_GEN2
+#define __ALTPLL
+
+
+/*
+ * System configuration
+ *
+ */
+
+#define ALT_DEVICE_FAMILY "Cyclone IV E"
+#define ALT_ENHANCED_INTERRUPT_API_PRESENT
+#define ALT_IRQ_BASE NULL
+#define ALT_LOG_PORT "/dev/null"
+#define ALT_LOG_PORT_BASE 0x0
+#define ALT_LOG_PORT_DEV null
+#define ALT_LOG_PORT_TYPE ""
+#define ALT_NUM_EXTERNAL_INTERRUPT_CONTROLLERS 0
+#define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
+#define ALT_NUM_INTERRUPT_CONTROLLERS 1
+#define ALT_STDERR "/dev/jtag_uart_0"
+#define ALT_STDERR_BASE 0x340
+#define ALT_STDERR_DEV jtag_uart_0
+#define ALT_STDERR_IS_JTAG_UART
+#define ALT_STDERR_PRESENT
+#define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
+#define ALT_STDIN "/dev/jtag_uart_0"
+#define ALT_STDIN_BASE 0x340
+#define ALT_STDIN_DEV jtag_uart_0
+#define ALT_STDIN_IS_JTAG_UART
+#define ALT_STDIN_PRESENT
+#define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
+#define ALT_STDOUT "/dev/jtag_uart_0"
+#define ALT_STDOUT_BASE 0x340
+#define ALT_STDOUT_DEV jtag_uart_0
+#define ALT_STDOUT_IS_JTAG_UART
+#define ALT_STDOUT_PRESENT
+#define ALT_STDOUT_TYPE "altera_avalon_jtag_uart"
+#define ALT_SYSTEM_NAME "nios_system"
+
+
+/*
+ * hal configuration
+ *
+ */
+
+#define ALT_INCLUDE_INSTRUCTION_RELATED_EXCEPTION_API
+#define ALT_MAX_FD 32
+#define ALT_SYS_CLK none
+#define ALT_TIMESTAMP_CLK none
+
+
+/*
+ * is_new_game_start configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_is_new_game_start altera_avalon_pio
+#define IS_NEW_GAME_START_BASE 0x1b0
+#define IS_NEW_GAME_START_BIT_CLEARING_EDGE_REGISTER 0
+#define IS_NEW_GAME_START_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define IS_NEW_GAME_START_CAPTURE 0
+#define IS_NEW_GAME_START_DATA_WIDTH 32
+#define IS_NEW_GAME_START_DO_TEST_BENCH_WIRING 0
+#define IS_NEW_GAME_START_DRIVEN_SIM_VALUE 0
+#define IS_NEW_GAME_START_EDGE_TYPE "NONE"
+#define IS_NEW_GAME_START_FREQ 50000000
+#define IS_NEW_GAME_START_HAS_IN 1
+#define IS_NEW_GAME_START_HAS_OUT 0
+#define IS_NEW_GAME_START_HAS_TRI 0
+#define IS_NEW_GAME_START_IRQ -1
+#define IS_NEW_GAME_START_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define IS_NEW_GAME_START_IRQ_TYPE "NONE"
+#define IS_NEW_GAME_START_NAME "/dev/is_new_game_start"
+#define IS_NEW_GAME_START_RESET_VALUE 0
+#define IS_NEW_GAME_START_SPAN 16
+#define IS_NEW_GAME_START_TYPE "altera_avalon_pio"
+
+
+/*
+ * jtag_uart_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_jtag_uart_0 altera_avalon_jtag_uart
+#define JTAG_UART_0_BASE 0x340
+#define JTAG_UART_0_IRQ 5
+#define JTAG_UART_0_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define JTAG_UART_0_NAME "/dev/jtag_uart_0"
+#define JTAG_UART_0_READ_DEPTH 64
+#define JTAG_UART_0_READ_THRESHOLD 8
+#define JTAG_UART_0_SPAN 8
+#define JTAG_UART_0_TYPE "altera_avalon_jtag_uart"
+#define JTAG_UART_0_WRITE_DEPTH 64
+#define JTAG_UART_0_WRITE_THRESHOLD 8
+
+
+/*
+ * keycode configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_keycode altera_avalon_pio
+#define KEYCODE_BASE 0xb0
+#define KEYCODE_BIT_CLEARING_EDGE_REGISTER 0
+#define KEYCODE_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define KEYCODE_CAPTURE 0
+#define KEYCODE_DATA_WIDTH 32
+#define KEYCODE_DO_TEST_BENCH_WIRING 0
+#define KEYCODE_DRIVEN_SIM_VALUE 0
+#define KEYCODE_EDGE_TYPE "NONE"
+#define KEYCODE_FREQ 50000000
+#define KEYCODE_HAS_IN 0
+#define KEYCODE_HAS_OUT 1
+#define KEYCODE_HAS_TRI 0
+#define KEYCODE_IRQ -1
+#define KEYCODE_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define KEYCODE_IRQ_TYPE "NONE"
+#define KEYCODE_NAME "/dev/keycode"
+#define KEYCODE_RESET_VALUE 0
+#define KEYCODE_SPAN 16
+#define KEYCODE_TYPE "altera_avalon_pio"
+
+
+/*
+ * keycode_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_keycode_0 altera_avalon_pio
+#define KEYCODE_0_BASE 0x40
+#define KEYCODE_0_BIT_CLEARING_EDGE_REGISTER 0
+#define KEYCODE_0_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define KEYCODE_0_CAPTURE 0
+#define KEYCODE_0_DATA_WIDTH 32
+#define KEYCODE_0_DO_TEST_BENCH_WIRING 0
+#define KEYCODE_0_DRIVEN_SIM_VALUE 0
+#define KEYCODE_0_EDGE_TYPE "NONE"
+#define KEYCODE_0_FREQ 50000000
+#define KEYCODE_0_HAS_IN 0
+#define KEYCODE_0_HAS_OUT 1
+#define KEYCODE_0_HAS_TRI 0
+#define KEYCODE_0_IRQ -1
+#define KEYCODE_0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define KEYCODE_0_IRQ_TYPE "NONE"
+#define KEYCODE_0_NAME "/dev/keycode_0"
+#define KEYCODE_0_RESET_VALUE 0
+#define KEYCODE_0_SPAN 16
+#define KEYCODE_0_TYPE "altera_avalon_pio"
+
+
+/*
+ * keycode_1 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_keycode_1 altera_avalon_pio
+#define KEYCODE_1_BASE 0x30
+#define KEYCODE_1_BIT_CLEARING_EDGE_REGISTER 0
+#define KEYCODE_1_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define KEYCODE_1_CAPTURE 0
+#define KEYCODE_1_DATA_WIDTH 32
+#define KEYCODE_1_DO_TEST_BENCH_WIRING 0
+#define KEYCODE_1_DRIVEN_SIM_VALUE 0
+#define KEYCODE_1_EDGE_TYPE "NONE"
+#define KEYCODE_1_FREQ 50000000
+#define KEYCODE_1_HAS_IN 0
+#define KEYCODE_1_HAS_OUT 1
+#define KEYCODE_1_HAS_TRI 0
+#define KEYCODE_1_IRQ -1
+#define KEYCODE_1_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define KEYCODE_1_IRQ_TYPE "NONE"
+#define KEYCODE_1_NAME "/dev/keycode_1"
+#define KEYCODE_1_RESET_VALUE 0
+#define KEYCODE_1_SPAN 16
+#define KEYCODE_1_TYPE "altera_avalon_pio"
+
+
+/*
+ * keycode_2 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_keycode_2 altera_avalon_pio
+#define KEYCODE_2_BASE 0x20
+#define KEYCODE_2_BIT_CLEARING_EDGE_REGISTER 0
+#define KEYCODE_2_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define KEYCODE_2_CAPTURE 0
+#define KEYCODE_2_DATA_WIDTH 32
+#define KEYCODE_2_DO_TEST_BENCH_WIRING 0
+#define KEYCODE_2_DRIVEN_SIM_VALUE 0
+#define KEYCODE_2_EDGE_TYPE "NONE"
+#define KEYCODE_2_FREQ 50000000
+#define KEYCODE_2_HAS_IN 0
+#define KEYCODE_2_HAS_OUT 1
+#define KEYCODE_2_HAS_TRI 0
+#define KEYCODE_2_IRQ -1
+#define KEYCODE_2_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define KEYCODE_2_IRQ_TYPE "NONE"
+#define KEYCODE_2_NAME "/dev/keycode_2"
+#define KEYCODE_2_RESET_VALUE 0
+#define KEYCODE_2_SPAN 16
+#define KEYCODE_2_TYPE "altera_avalon_pio"
+
+
+/*
+ * onchip_memory2_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_onchip_memory2_0 altera_avalon_onchip_memory2
+#define ONCHIP_MEMORY2_0_ALLOW_IN_SYSTEM_MEMORY_CONTENT_EDITOR 0
+#define ONCHIP_MEMORY2_0_ALLOW_MRAM_SIM_CONTENTS_ONLY_FILE 0
+#define ONCHIP_MEMORY2_0_BASE 0x0
+#define ONCHIP_MEMORY2_0_CONTENTS_INFO ""
+#define ONCHIP_MEMORY2_0_DUAL_PORT 0
+#define ONCHIP_MEMORY2_0_GUI_RAM_BLOCK_TYPE "AUTO"
+#define ONCHIP_MEMORY2_0_INIT_CONTENTS_FILE "nios_system_onchip_memory2_0"
+#define ONCHIP_MEMORY2_0_INIT_MEM_CONTENT 1
+#define ONCHIP_MEMORY2_0_INSTANCE_ID "NONE"
+#define ONCHIP_MEMORY2_0_IRQ -1
+#define ONCHIP_MEMORY2_0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define ONCHIP_MEMORY2_0_NAME "/dev/onchip_memory2_0"
+#define ONCHIP_MEMORY2_0_NON_DEFAULT_INIT_FILE_ENABLED 0
+#define ONCHIP_MEMORY2_0_RAM_BLOCK_TYPE "AUTO"
+#define ONCHIP_MEMORY2_0_READ_DURING_WRITE_MODE "DONT_CARE"
+#define ONCHIP_MEMORY2_0_SINGLE_CLOCK_OP 0
+#define ONCHIP_MEMORY2_0_SIZE_MULTIPLE 1
+#define ONCHIP_MEMORY2_0_SIZE_VALUE 16
+#define ONCHIP_MEMORY2_0_SPAN 16
+#define ONCHIP_MEMORY2_0_TYPE "altera_avalon_onchip_memory2"
+#define ONCHIP_MEMORY2_0_WRITABLE 1
+
+
+/*
+ * otg_hpi_address configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_otg_hpi_address altera_avalon_pio
+#define OTG_HPI_ADDRESS_BASE 0x310
+#define OTG_HPI_ADDRESS_BIT_CLEARING_EDGE_REGISTER 0
+#define OTG_HPI_ADDRESS_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define OTG_HPI_ADDRESS_CAPTURE 0
+#define OTG_HPI_ADDRESS_DATA_WIDTH 2
+#define OTG_HPI_ADDRESS_DO_TEST_BENCH_WIRING 0
+#define OTG_HPI_ADDRESS_DRIVEN_SIM_VALUE 0
+#define OTG_HPI_ADDRESS_EDGE_TYPE "NONE"
+#define OTG_HPI_ADDRESS_FREQ 50000000
+#define OTG_HPI_ADDRESS_HAS_IN 0
+#define OTG_HPI_ADDRESS_HAS_OUT 1
+#define OTG_HPI_ADDRESS_HAS_TRI 0
+#define OTG_HPI_ADDRESS_IRQ -1
+#define OTG_HPI_ADDRESS_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define OTG_HPI_ADDRESS_IRQ_TYPE "NONE"
+#define OTG_HPI_ADDRESS_NAME "/dev/otg_hpi_address"
+#define OTG_HPI_ADDRESS_RESET_VALUE 0
+#define OTG_HPI_ADDRESS_SPAN 16
+#define OTG_HPI_ADDRESS_TYPE "altera_avalon_pio"
+
+
+/*
+ * otg_hpi_cs configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_otg_hpi_cs altera_avalon_pio
+#define OTG_HPI_CS_BASE 0x2d0
+#define OTG_HPI_CS_BIT_CLEARING_EDGE_REGISTER 0
+#define OTG_HPI_CS_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define OTG_HPI_CS_CAPTURE 0
+#define OTG_HPI_CS_DATA_WIDTH 1
+#define OTG_HPI_CS_DO_TEST_BENCH_WIRING 0
+#define OTG_HPI_CS_DRIVEN_SIM_VALUE 0
+#define OTG_HPI_CS_EDGE_TYPE "NONE"
+#define OTG_HPI_CS_FREQ 50000000
+#define OTG_HPI_CS_HAS_IN 0
+#define OTG_HPI_CS_HAS_OUT 1
+#define OTG_HPI_CS_HAS_TRI 0
+#define OTG_HPI_CS_IRQ -1
+#define OTG_HPI_CS_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define OTG_HPI_CS_IRQ_TYPE "NONE"
+#define OTG_HPI_CS_NAME "/dev/otg_hpi_cs"
+#define OTG_HPI_CS_RESET_VALUE 0
+#define OTG_HPI_CS_SPAN 16
+#define OTG_HPI_CS_TYPE "altera_avalon_pio"
+
+
+/*
+ * otg_hpi_data configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_otg_hpi_data altera_avalon_pio
+#define OTG_HPI_DATA_BASE 0x300
+#define OTG_HPI_DATA_BIT_CLEARING_EDGE_REGISTER 0
+#define OTG_HPI_DATA_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define OTG_HPI_DATA_CAPTURE 0
+#define OTG_HPI_DATA_DATA_WIDTH 16
+#define OTG_HPI_DATA_DO_TEST_BENCH_WIRING 0
+#define OTG_HPI_DATA_DRIVEN_SIM_VALUE 0
+#define OTG_HPI_DATA_EDGE_TYPE "NONE"
+#define OTG_HPI_DATA_FREQ 50000000
+#define OTG_HPI_DATA_HAS_IN 1
+#define OTG_HPI_DATA_HAS_OUT 1
+#define OTG_HPI_DATA_HAS_TRI 0
+#define OTG_HPI_DATA_IRQ -1
+#define OTG_HPI_DATA_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define OTG_HPI_DATA_IRQ_TYPE "NONE"
+#define OTG_HPI_DATA_NAME "/dev/otg_hpi_data"
+#define OTG_HPI_DATA_RESET_VALUE 0
+#define OTG_HPI_DATA_SPAN 16
+#define OTG_HPI_DATA_TYPE "altera_avalon_pio"
+
+
+/*
+ * otg_hpi_r configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_otg_hpi_r altera_avalon_pio
+#define OTG_HPI_R_BASE 0x2f0
+#define OTG_HPI_R_BIT_CLEARING_EDGE_REGISTER 0
+#define OTG_HPI_R_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define OTG_HPI_R_CAPTURE 0
+#define OTG_HPI_R_DATA_WIDTH 1
+#define OTG_HPI_R_DO_TEST_BENCH_WIRING 0
+#define OTG_HPI_R_DRIVEN_SIM_VALUE 0
+#define OTG_HPI_R_EDGE_TYPE "NONE"
+#define OTG_HPI_R_FREQ 50000000
+#define OTG_HPI_R_HAS_IN 0
+#define OTG_HPI_R_HAS_OUT 1
+#define OTG_HPI_R_HAS_TRI 0
+#define OTG_HPI_R_IRQ -1
+#define OTG_HPI_R_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define OTG_HPI_R_IRQ_TYPE "NONE"
+#define OTG_HPI_R_NAME "/dev/otg_hpi_r"
+#define OTG_HPI_R_RESET_VALUE 0
+#define OTG_HPI_R_SPAN 16
+#define OTG_HPI_R_TYPE "altera_avalon_pio"
+
+
+/*
+ * otg_hpi_reset configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_otg_hpi_reset altera_avalon_pio
+#define OTG_HPI_RESET_BASE 0x2c0
+#define OTG_HPI_RESET_BIT_CLEARING_EDGE_REGISTER 0
+#define OTG_HPI_RESET_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define OTG_HPI_RESET_CAPTURE 0
+#define OTG_HPI_RESET_DATA_WIDTH 1
+#define OTG_HPI_RESET_DO_TEST_BENCH_WIRING 0
+#define OTG_HPI_RESET_DRIVEN_SIM_VALUE 0
+#define OTG_HPI_RESET_EDGE_TYPE "NONE"
+#define OTG_HPI_RESET_FREQ 50000000
+#define OTG_HPI_RESET_HAS_IN 0
+#define OTG_HPI_RESET_HAS_OUT 1
+#define OTG_HPI_RESET_HAS_TRI 0
+#define OTG_HPI_RESET_IRQ -1
+#define OTG_HPI_RESET_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define OTG_HPI_RESET_IRQ_TYPE "NONE"
+#define OTG_HPI_RESET_NAME "/dev/otg_hpi_reset"
+#define OTG_HPI_RESET_RESET_VALUE 0
+#define OTG_HPI_RESET_SPAN 16
+#define OTG_HPI_RESET_TYPE "altera_avalon_pio"
+
+
+/*
+ * otg_hpi_w configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_otg_hpi_w altera_avalon_pio
+#define OTG_HPI_W_BASE 0x2e0
+#define OTG_HPI_W_BIT_CLEARING_EDGE_REGISTER 0
+#define OTG_HPI_W_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define OTG_HPI_W_CAPTURE 0
+#define OTG_HPI_W_DATA_WIDTH 1
+#define OTG_HPI_W_DO_TEST_BENCH_WIRING 0
+#define OTG_HPI_W_DRIVEN_SIM_VALUE 0
+#define OTG_HPI_W_EDGE_TYPE "NONE"
+#define OTG_HPI_W_FREQ 50000000
+#define OTG_HPI_W_HAS_IN 0
+#define OTG_HPI_W_HAS_OUT 1
+#define OTG_HPI_W_HAS_TRI 0
+#define OTG_HPI_W_IRQ -1
+#define OTG_HPI_W_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define OTG_HPI_W_IRQ_TYPE "NONE"
+#define OTG_HPI_W_NAME "/dev/otg_hpi_w"
+#define OTG_HPI_W_RESET_VALUE 0
+#define OTG_HPI_W_SPAN 16
+#define OTG_HPI_W_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_0 altera_avalon_pio
+#define POSITION_0_BASE 0x1a0
+#define POSITION_0_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_0_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_0_CAPTURE 0
+#define POSITION_0_DATA_WIDTH 32
+#define POSITION_0_DO_TEST_BENCH_WIRING 0
+#define POSITION_0_DRIVEN_SIM_VALUE 0
+#define POSITION_0_EDGE_TYPE "NONE"
+#define POSITION_0_FREQ 50000000
+#define POSITION_0_HAS_IN 0
+#define POSITION_0_HAS_OUT 1
+#define POSITION_0_HAS_TRI 0
+#define POSITION_0_IRQ -1
+#define POSITION_0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_0_IRQ_TYPE "NONE"
+#define POSITION_0_NAME "/dev/position_0"
+#define POSITION_0_RESET_VALUE 0
+#define POSITION_0_SPAN 16
+#define POSITION_0_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_1 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_1 altera_avalon_pio
+#define POSITION_1_BASE 0x190
+#define POSITION_1_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_1_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_1_CAPTURE 0
+#define POSITION_1_DATA_WIDTH 32
+#define POSITION_1_DO_TEST_BENCH_WIRING 0
+#define POSITION_1_DRIVEN_SIM_VALUE 0
+#define POSITION_1_EDGE_TYPE "NONE"
+#define POSITION_1_FREQ 50000000
+#define POSITION_1_HAS_IN 0
+#define POSITION_1_HAS_OUT 1
+#define POSITION_1_HAS_TRI 0
+#define POSITION_1_IRQ -1
+#define POSITION_1_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_1_IRQ_TYPE "NONE"
+#define POSITION_1_NAME "/dev/position_1"
+#define POSITION_1_RESET_VALUE 0
+#define POSITION_1_SPAN 16
+#define POSITION_1_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_10 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_10 altera_avalon_pio
+#define POSITION_10_BASE 0x100
+#define POSITION_10_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_10_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_10_CAPTURE 0
+#define POSITION_10_DATA_WIDTH 32
+#define POSITION_10_DO_TEST_BENCH_WIRING 0
+#define POSITION_10_DRIVEN_SIM_VALUE 0
+#define POSITION_10_EDGE_TYPE "NONE"
+#define POSITION_10_FREQ 50000000
+#define POSITION_10_HAS_IN 0
+#define POSITION_10_HAS_OUT 1
+#define POSITION_10_HAS_TRI 0
+#define POSITION_10_IRQ -1
+#define POSITION_10_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_10_IRQ_TYPE "NONE"
+#define POSITION_10_NAME "/dev/position_10"
+#define POSITION_10_RESET_VALUE 0
+#define POSITION_10_SPAN 16
+#define POSITION_10_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_11 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_11 altera_avalon_pio
+#define POSITION_11_BASE 0xf0
+#define POSITION_11_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_11_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_11_CAPTURE 0
+#define POSITION_11_DATA_WIDTH 32
+#define POSITION_11_DO_TEST_BENCH_WIRING 0
+#define POSITION_11_DRIVEN_SIM_VALUE 0
+#define POSITION_11_EDGE_TYPE "NONE"
+#define POSITION_11_FREQ 50000000
+#define POSITION_11_HAS_IN 0
+#define POSITION_11_HAS_OUT 1
+#define POSITION_11_HAS_TRI 0
+#define POSITION_11_IRQ -1
+#define POSITION_11_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_11_IRQ_TYPE "NONE"
+#define POSITION_11_NAME "/dev/position_11"
+#define POSITION_11_RESET_VALUE 0
+#define POSITION_11_SPAN 16
+#define POSITION_11_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_12 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_12 altera_avalon_pio
+#define POSITION_12_BASE 0xe0
+#define POSITION_12_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_12_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_12_CAPTURE 0
+#define POSITION_12_DATA_WIDTH 32
+#define POSITION_12_DO_TEST_BENCH_WIRING 0
+#define POSITION_12_DRIVEN_SIM_VALUE 0
+#define POSITION_12_EDGE_TYPE "NONE"
+#define POSITION_12_FREQ 50000000
+#define POSITION_12_HAS_IN 0
+#define POSITION_12_HAS_OUT 1
+#define POSITION_12_HAS_TRI 0
+#define POSITION_12_IRQ -1
+#define POSITION_12_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_12_IRQ_TYPE "NONE"
+#define POSITION_12_NAME "/dev/position_12"
+#define POSITION_12_RESET_VALUE 0
+#define POSITION_12_SPAN 16
+#define POSITION_12_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_13 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_13 altera_avalon_pio
+#define POSITION_13_BASE 0xd0
+#define POSITION_13_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_13_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_13_CAPTURE 0
+#define POSITION_13_DATA_WIDTH 32
+#define POSITION_13_DO_TEST_BENCH_WIRING 0
+#define POSITION_13_DRIVEN_SIM_VALUE 0
+#define POSITION_13_EDGE_TYPE "NONE"
+#define POSITION_13_FREQ 50000000
+#define POSITION_13_HAS_IN 0
+#define POSITION_13_HAS_OUT 1
+#define POSITION_13_HAS_TRI 0
+#define POSITION_13_IRQ -1
+#define POSITION_13_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_13_IRQ_TYPE "NONE"
+#define POSITION_13_NAME "/dev/position_13"
+#define POSITION_13_RESET_VALUE 0
+#define POSITION_13_SPAN 16
+#define POSITION_13_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_14 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_14 altera_avalon_pio
+#define POSITION_14_BASE 0xc0
+#define POSITION_14_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_14_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_14_CAPTURE 0
+#define POSITION_14_DATA_WIDTH 32
+#define POSITION_14_DO_TEST_BENCH_WIRING 0
+#define POSITION_14_DRIVEN_SIM_VALUE 0
+#define POSITION_14_EDGE_TYPE "NONE"
+#define POSITION_14_FREQ 50000000
+#define POSITION_14_HAS_IN 0
+#define POSITION_14_HAS_OUT 1
+#define POSITION_14_HAS_TRI 0
+#define POSITION_14_IRQ -1
+#define POSITION_14_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_14_IRQ_TYPE "NONE"
+#define POSITION_14_NAME "/dev/position_14"
+#define POSITION_14_RESET_VALUE 0
+#define POSITION_14_SPAN 16
+#define POSITION_14_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_15 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_15 altera_avalon_pio
+#define POSITION_15_BASE 0xa0
+#define POSITION_15_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_15_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_15_CAPTURE 0
+#define POSITION_15_DATA_WIDTH 32
+#define POSITION_15_DO_TEST_BENCH_WIRING 0
+#define POSITION_15_DRIVEN_SIM_VALUE 0
+#define POSITION_15_EDGE_TYPE "NONE"
+#define POSITION_15_FREQ 50000000
+#define POSITION_15_HAS_IN 0
+#define POSITION_15_HAS_OUT 1
+#define POSITION_15_HAS_TRI 0
+#define POSITION_15_IRQ -1
+#define POSITION_15_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_15_IRQ_TYPE "NONE"
+#define POSITION_15_NAME "/dev/position_15"
+#define POSITION_15_RESET_VALUE 0
+#define POSITION_15_SPAN 16
+#define POSITION_15_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_16 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_16 altera_avalon_pio
+#define POSITION_16_BASE 0x90
+#define POSITION_16_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_16_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_16_CAPTURE 0
+#define POSITION_16_DATA_WIDTH 32
+#define POSITION_16_DO_TEST_BENCH_WIRING 0
+#define POSITION_16_DRIVEN_SIM_VALUE 0
+#define POSITION_16_EDGE_TYPE "NONE"
+#define POSITION_16_FREQ 50000000
+#define POSITION_16_HAS_IN 0
+#define POSITION_16_HAS_OUT 1
+#define POSITION_16_HAS_TRI 0
+#define POSITION_16_IRQ -1
+#define POSITION_16_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_16_IRQ_TYPE "NONE"
+#define POSITION_16_NAME "/dev/position_16"
+#define POSITION_16_RESET_VALUE 0
+#define POSITION_16_SPAN 16
+#define POSITION_16_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_17 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_17 altera_avalon_pio
+#define POSITION_17_BASE 0x80
+#define POSITION_17_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_17_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_17_CAPTURE 0
+#define POSITION_17_DATA_WIDTH 32
+#define POSITION_17_DO_TEST_BENCH_WIRING 0
+#define POSITION_17_DRIVEN_SIM_VALUE 0
+#define POSITION_17_EDGE_TYPE "NONE"
+#define POSITION_17_FREQ 50000000
+#define POSITION_17_HAS_IN 0
+#define POSITION_17_HAS_OUT 1
+#define POSITION_17_HAS_TRI 0
+#define POSITION_17_IRQ -1
+#define POSITION_17_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_17_IRQ_TYPE "NONE"
+#define POSITION_17_NAME "/dev/position_17"
+#define POSITION_17_RESET_VALUE 0
+#define POSITION_17_SPAN 16
+#define POSITION_17_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_18 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_18 altera_avalon_pio
+#define POSITION_18_BASE 0x70
+#define POSITION_18_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_18_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_18_CAPTURE 0
+#define POSITION_18_DATA_WIDTH 32
+#define POSITION_18_DO_TEST_BENCH_WIRING 0
+#define POSITION_18_DRIVEN_SIM_VALUE 0
+#define POSITION_18_EDGE_TYPE "NONE"
+#define POSITION_18_FREQ 50000000
+#define POSITION_18_HAS_IN 0
+#define POSITION_18_HAS_OUT 1
+#define POSITION_18_HAS_TRI 0
+#define POSITION_18_IRQ -1
+#define POSITION_18_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_18_IRQ_TYPE "NONE"
+#define POSITION_18_NAME "/dev/position_18"
+#define POSITION_18_RESET_VALUE 0
+#define POSITION_18_SPAN 16
+#define POSITION_18_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_19 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_19 altera_avalon_pio
+#define POSITION_19_BASE 0x60
+#define POSITION_19_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_19_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_19_CAPTURE 0
+#define POSITION_19_DATA_WIDTH 32
+#define POSITION_19_DO_TEST_BENCH_WIRING 0
+#define POSITION_19_DRIVEN_SIM_VALUE 0
+#define POSITION_19_EDGE_TYPE "NONE"
+#define POSITION_19_FREQ 50000000
+#define POSITION_19_HAS_IN 0
+#define POSITION_19_HAS_OUT 1
+#define POSITION_19_HAS_TRI 0
+#define POSITION_19_IRQ -1
+#define POSITION_19_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_19_IRQ_TYPE "NONE"
+#define POSITION_19_NAME "/dev/position_19"
+#define POSITION_19_RESET_VALUE 0
+#define POSITION_19_SPAN 16
+#define POSITION_19_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_2 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_2 altera_avalon_pio
+#define POSITION_2_BASE 0x180
+#define POSITION_2_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_2_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_2_CAPTURE 0
+#define POSITION_2_DATA_WIDTH 32
+#define POSITION_2_DO_TEST_BENCH_WIRING 0
+#define POSITION_2_DRIVEN_SIM_VALUE 0
+#define POSITION_2_EDGE_TYPE "NONE"
+#define POSITION_2_FREQ 50000000
+#define POSITION_2_HAS_IN 0
+#define POSITION_2_HAS_OUT 1
+#define POSITION_2_HAS_TRI 0
+#define POSITION_2_IRQ -1
+#define POSITION_2_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_2_IRQ_TYPE "NONE"
+#define POSITION_2_NAME "/dev/position_2"
+#define POSITION_2_RESET_VALUE 0
+#define POSITION_2_SPAN 16
+#define POSITION_2_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_20 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_20 altera_avalon_pio
+#define POSITION_20_BASE 0x50
+#define POSITION_20_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_20_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_20_CAPTURE 0
+#define POSITION_20_DATA_WIDTH 32
+#define POSITION_20_DO_TEST_BENCH_WIRING 0
+#define POSITION_20_DRIVEN_SIM_VALUE 0
+#define POSITION_20_EDGE_TYPE "NONE"
+#define POSITION_20_FREQ 50000000
+#define POSITION_20_HAS_IN 0
+#define POSITION_20_HAS_OUT 1
+#define POSITION_20_HAS_TRI 0
+#define POSITION_20_IRQ -1
+#define POSITION_20_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_20_IRQ_TYPE "NONE"
+#define POSITION_20_NAME "/dev/position_20"
+#define POSITION_20_RESET_VALUE 0
+#define POSITION_20_SPAN 16
+#define POSITION_20_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_21 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_21 altera_avalon_pio
+#define POSITION_21_BASE 0x2a0
+#define POSITION_21_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_21_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_21_CAPTURE 0
+#define POSITION_21_DATA_WIDTH 32
+#define POSITION_21_DO_TEST_BENCH_WIRING 0
+#define POSITION_21_DRIVEN_SIM_VALUE 0
+#define POSITION_21_EDGE_TYPE "NONE"
+#define POSITION_21_FREQ 50000000
+#define POSITION_21_HAS_IN 0
+#define POSITION_21_HAS_OUT 1
+#define POSITION_21_HAS_TRI 0
+#define POSITION_21_IRQ -1
+#define POSITION_21_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_21_IRQ_TYPE "NONE"
+#define POSITION_21_NAME "/dev/position_21"
+#define POSITION_21_RESET_VALUE 0
+#define POSITION_21_SPAN 16
+#define POSITION_21_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_22 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_22 altera_avalon_pio
+#define POSITION_22_BASE 0x290
+#define POSITION_22_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_22_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_22_CAPTURE 0
+#define POSITION_22_DATA_WIDTH 32
+#define POSITION_22_DO_TEST_BENCH_WIRING 0
+#define POSITION_22_DRIVEN_SIM_VALUE 0
+#define POSITION_22_EDGE_TYPE "NONE"
+#define POSITION_22_FREQ 50000000
+#define POSITION_22_HAS_IN 0
+#define POSITION_22_HAS_OUT 1
+#define POSITION_22_HAS_TRI 0
+#define POSITION_22_IRQ -1
+#define POSITION_22_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_22_IRQ_TYPE "NONE"
+#define POSITION_22_NAME "/dev/position_22"
+#define POSITION_22_RESET_VALUE 0
+#define POSITION_22_SPAN 16
+#define POSITION_22_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_23 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_23 altera_avalon_pio
+#define POSITION_23_BASE 0x280
+#define POSITION_23_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_23_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_23_CAPTURE 0
+#define POSITION_23_DATA_WIDTH 32
+#define POSITION_23_DO_TEST_BENCH_WIRING 0
+#define POSITION_23_DRIVEN_SIM_VALUE 0
+#define POSITION_23_EDGE_TYPE "NONE"
+#define POSITION_23_FREQ 50000000
+#define POSITION_23_HAS_IN 0
+#define POSITION_23_HAS_OUT 1
+#define POSITION_23_HAS_TRI 0
+#define POSITION_23_IRQ -1
+#define POSITION_23_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_23_IRQ_TYPE "NONE"
+#define POSITION_23_NAME "/dev/position_23"
+#define POSITION_23_RESET_VALUE 0
+#define POSITION_23_SPAN 16
+#define POSITION_23_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_24 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_24 altera_avalon_pio
+#define POSITION_24_BASE 0x270
+#define POSITION_24_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_24_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_24_CAPTURE 0
+#define POSITION_24_DATA_WIDTH 32
+#define POSITION_24_DO_TEST_BENCH_WIRING 0
+#define POSITION_24_DRIVEN_SIM_VALUE 0
+#define POSITION_24_EDGE_TYPE "NONE"
+#define POSITION_24_FREQ 50000000
+#define POSITION_24_HAS_IN 0
+#define POSITION_24_HAS_OUT 1
+#define POSITION_24_HAS_TRI 0
+#define POSITION_24_IRQ -1
+#define POSITION_24_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_24_IRQ_TYPE "NONE"
+#define POSITION_24_NAME "/dev/position_24"
+#define POSITION_24_RESET_VALUE 0
+#define POSITION_24_SPAN 16
+#define POSITION_24_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_25 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_25 altera_avalon_pio
+#define POSITION_25_BASE 0x260
+#define POSITION_25_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_25_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_25_CAPTURE 0
+#define POSITION_25_DATA_WIDTH 32
+#define POSITION_25_DO_TEST_BENCH_WIRING 0
+#define POSITION_25_DRIVEN_SIM_VALUE 0
+#define POSITION_25_EDGE_TYPE "NONE"
+#define POSITION_25_FREQ 50000000
+#define POSITION_25_HAS_IN 0
+#define POSITION_25_HAS_OUT 1
+#define POSITION_25_HAS_TRI 0
+#define POSITION_25_IRQ -1
+#define POSITION_25_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_25_IRQ_TYPE "NONE"
+#define POSITION_25_NAME "/dev/position_25"
+#define POSITION_25_RESET_VALUE 0
+#define POSITION_25_SPAN 16
+#define POSITION_25_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_26 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_26 altera_avalon_pio
+#define POSITION_26_BASE 0x250
+#define POSITION_26_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_26_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_26_CAPTURE 0
+#define POSITION_26_DATA_WIDTH 32
+#define POSITION_26_DO_TEST_BENCH_WIRING 0
+#define POSITION_26_DRIVEN_SIM_VALUE 0
+#define POSITION_26_EDGE_TYPE "NONE"
+#define POSITION_26_FREQ 50000000
+#define POSITION_26_HAS_IN 0
+#define POSITION_26_HAS_OUT 1
+#define POSITION_26_HAS_TRI 0
+#define POSITION_26_IRQ -1
+#define POSITION_26_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_26_IRQ_TYPE "NONE"
+#define POSITION_26_NAME "/dev/position_26"
+#define POSITION_26_RESET_VALUE 0
+#define POSITION_26_SPAN 16
+#define POSITION_26_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_27 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_27 altera_avalon_pio
+#define POSITION_27_BASE 0x240
+#define POSITION_27_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_27_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_27_CAPTURE 0
+#define POSITION_27_DATA_WIDTH 32
+#define POSITION_27_DO_TEST_BENCH_WIRING 0
+#define POSITION_27_DRIVEN_SIM_VALUE 0
+#define POSITION_27_EDGE_TYPE "NONE"
+#define POSITION_27_FREQ 50000000
+#define POSITION_27_HAS_IN 0
+#define POSITION_27_HAS_OUT 1
+#define POSITION_27_HAS_TRI 0
+#define POSITION_27_IRQ -1
+#define POSITION_27_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_27_IRQ_TYPE "NONE"
+#define POSITION_27_NAME "/dev/position_27"
+#define POSITION_27_RESET_VALUE 0
+#define POSITION_27_SPAN 16
+#define POSITION_27_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_28 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_28 altera_avalon_pio
+#define POSITION_28_BASE 0x230
+#define POSITION_28_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_28_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_28_CAPTURE 0
+#define POSITION_28_DATA_WIDTH 32
+#define POSITION_28_DO_TEST_BENCH_WIRING 0
+#define POSITION_28_DRIVEN_SIM_VALUE 0
+#define POSITION_28_EDGE_TYPE "NONE"
+#define POSITION_28_FREQ 50000000
+#define POSITION_28_HAS_IN 0
+#define POSITION_28_HAS_OUT 1
+#define POSITION_28_HAS_TRI 0
+#define POSITION_28_IRQ -1
+#define POSITION_28_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_28_IRQ_TYPE "NONE"
+#define POSITION_28_NAME "/dev/position_28"
+#define POSITION_28_RESET_VALUE 0
+#define POSITION_28_SPAN 16
+#define POSITION_28_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_29 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_29 altera_avalon_pio
+#define POSITION_29_BASE 0x220
+#define POSITION_29_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_29_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_29_CAPTURE 0
+#define POSITION_29_DATA_WIDTH 32
+#define POSITION_29_DO_TEST_BENCH_WIRING 0
+#define POSITION_29_DRIVEN_SIM_VALUE 0
+#define POSITION_29_EDGE_TYPE "NONE"
+#define POSITION_29_FREQ 50000000
+#define POSITION_29_HAS_IN 0
+#define POSITION_29_HAS_OUT 1
+#define POSITION_29_HAS_TRI 0
+#define POSITION_29_IRQ -1
+#define POSITION_29_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_29_IRQ_TYPE "NONE"
+#define POSITION_29_NAME "/dev/position_29"
+#define POSITION_29_RESET_VALUE 0
+#define POSITION_29_SPAN 16
+#define POSITION_29_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_3 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_3 altera_avalon_pio
+#define POSITION_3_BASE 0x170
+#define POSITION_3_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_3_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_3_CAPTURE 0
+#define POSITION_3_DATA_WIDTH 32
+#define POSITION_3_DO_TEST_BENCH_WIRING 0
+#define POSITION_3_DRIVEN_SIM_VALUE 0
+#define POSITION_3_EDGE_TYPE "NONE"
+#define POSITION_3_FREQ 50000000
+#define POSITION_3_HAS_IN 0
+#define POSITION_3_HAS_OUT 1
+#define POSITION_3_HAS_TRI 0
+#define POSITION_3_IRQ -1
+#define POSITION_3_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_3_IRQ_TYPE "NONE"
+#define POSITION_3_NAME "/dev/position_3"
+#define POSITION_3_RESET_VALUE 0
+#define POSITION_3_SPAN 16
+#define POSITION_3_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_30 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_30 altera_avalon_pio
+#define POSITION_30_BASE 0x210
+#define POSITION_30_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_30_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_30_CAPTURE 0
+#define POSITION_30_DATA_WIDTH 32
+#define POSITION_30_DO_TEST_BENCH_WIRING 0
+#define POSITION_30_DRIVEN_SIM_VALUE 0
+#define POSITION_30_EDGE_TYPE "NONE"
+#define POSITION_30_FREQ 50000000
+#define POSITION_30_HAS_IN 0
+#define POSITION_30_HAS_OUT 1
+#define POSITION_30_HAS_TRI 0
+#define POSITION_30_IRQ -1
+#define POSITION_30_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_30_IRQ_TYPE "NONE"
+#define POSITION_30_NAME "/dev/position_30"
+#define POSITION_30_RESET_VALUE 0
+#define POSITION_30_SPAN 16
+#define POSITION_30_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_31 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_31 altera_avalon_pio
+#define POSITION_31_BASE 0x200
+#define POSITION_31_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_31_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_31_CAPTURE 0
+#define POSITION_31_DATA_WIDTH 32
+#define POSITION_31_DO_TEST_BENCH_WIRING 0
+#define POSITION_31_DRIVEN_SIM_VALUE 0
+#define POSITION_31_EDGE_TYPE "NONE"
+#define POSITION_31_FREQ 50000000
+#define POSITION_31_HAS_IN 0
+#define POSITION_31_HAS_OUT 1
+#define POSITION_31_HAS_TRI 0
+#define POSITION_31_IRQ -1
+#define POSITION_31_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_31_IRQ_TYPE "NONE"
+#define POSITION_31_NAME "/dev/position_31"
+#define POSITION_31_RESET_VALUE 0
+#define POSITION_31_SPAN 16
+#define POSITION_31_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_32 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_32 altera_avalon_pio
+#define POSITION_32_BASE 0x1f0
+#define POSITION_32_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_32_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_32_CAPTURE 0
+#define POSITION_32_DATA_WIDTH 32
+#define POSITION_32_DO_TEST_BENCH_WIRING 0
+#define POSITION_32_DRIVEN_SIM_VALUE 0
+#define POSITION_32_EDGE_TYPE "NONE"
+#define POSITION_32_FREQ 50000000
+#define POSITION_32_HAS_IN 0
+#define POSITION_32_HAS_OUT 1
+#define POSITION_32_HAS_TRI 0
+#define POSITION_32_IRQ -1
+#define POSITION_32_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_32_IRQ_TYPE "NONE"
+#define POSITION_32_NAME "/dev/position_32"
+#define POSITION_32_RESET_VALUE 0
+#define POSITION_32_SPAN 16
+#define POSITION_32_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_33 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_33 altera_avalon_pio
+#define POSITION_33_BASE 0x1e0
+#define POSITION_33_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_33_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_33_CAPTURE 0
+#define POSITION_33_DATA_WIDTH 32
+#define POSITION_33_DO_TEST_BENCH_WIRING 0
+#define POSITION_33_DRIVEN_SIM_VALUE 0
+#define POSITION_33_EDGE_TYPE "NONE"
+#define POSITION_33_FREQ 50000000
+#define POSITION_33_HAS_IN 0
+#define POSITION_33_HAS_OUT 1
+#define POSITION_33_HAS_TRI 0
+#define POSITION_33_IRQ -1
+#define POSITION_33_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_33_IRQ_TYPE "NONE"
+#define POSITION_33_NAME "/dev/position_33"
+#define POSITION_33_RESET_VALUE 0
+#define POSITION_33_SPAN 16
+#define POSITION_33_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_34 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_34 altera_avalon_pio
+#define POSITION_34_BASE 0x1d0
+#define POSITION_34_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_34_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_34_CAPTURE 0
+#define POSITION_34_DATA_WIDTH 32
+#define POSITION_34_DO_TEST_BENCH_WIRING 0
+#define POSITION_34_DRIVEN_SIM_VALUE 0
+#define POSITION_34_EDGE_TYPE "NONE"
+#define POSITION_34_FREQ 50000000
+#define POSITION_34_HAS_IN 0
+#define POSITION_34_HAS_OUT 1
+#define POSITION_34_HAS_TRI 0
+#define POSITION_34_IRQ -1
+#define POSITION_34_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_34_IRQ_TYPE "NONE"
+#define POSITION_34_NAME "/dev/position_34"
+#define POSITION_34_RESET_VALUE 0
+#define POSITION_34_SPAN 16
+#define POSITION_34_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_35 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_35 altera_avalon_pio
+#define POSITION_35_BASE 0x1c0
+#define POSITION_35_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_35_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_35_CAPTURE 0
+#define POSITION_35_DATA_WIDTH 32
+#define POSITION_35_DO_TEST_BENCH_WIRING 0
+#define POSITION_35_DRIVEN_SIM_VALUE 0
+#define POSITION_35_EDGE_TYPE "NONE"
+#define POSITION_35_FREQ 50000000
+#define POSITION_35_HAS_IN 0
+#define POSITION_35_HAS_OUT 1
+#define POSITION_35_HAS_TRI 0
+#define POSITION_35_IRQ -1
+#define POSITION_35_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_35_IRQ_TYPE "NONE"
+#define POSITION_35_NAME "/dev/position_35"
+#define POSITION_35_RESET_VALUE 0
+#define POSITION_35_SPAN 16
+#define POSITION_35_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_36 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_36 altera_avalon_pio
+#define POSITION_36_BASE 0x2b0
+#define POSITION_36_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_36_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_36_CAPTURE 0
+#define POSITION_36_DATA_WIDTH 32
+#define POSITION_36_DO_TEST_BENCH_WIRING 0
+#define POSITION_36_DRIVEN_SIM_VALUE 0
+#define POSITION_36_EDGE_TYPE "NONE"
+#define POSITION_36_FREQ 50000000
+#define POSITION_36_HAS_IN 0
+#define POSITION_36_HAS_OUT 1
+#define POSITION_36_HAS_TRI 0
+#define POSITION_36_IRQ -1
+#define POSITION_36_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_36_IRQ_TYPE "NONE"
+#define POSITION_36_NAME "/dev/position_36"
+#define POSITION_36_RESET_VALUE 0
+#define POSITION_36_SPAN 16
+#define POSITION_36_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_4 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_4 altera_avalon_pio
+#define POSITION_4_BASE 0x160
+#define POSITION_4_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_4_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_4_CAPTURE 0
+#define POSITION_4_DATA_WIDTH 32
+#define POSITION_4_DO_TEST_BENCH_WIRING 0
+#define POSITION_4_DRIVEN_SIM_VALUE 0
+#define POSITION_4_EDGE_TYPE "NONE"
+#define POSITION_4_FREQ 50000000
+#define POSITION_4_HAS_IN 0
+#define POSITION_4_HAS_OUT 1
+#define POSITION_4_HAS_TRI 0
+#define POSITION_4_IRQ -1
+#define POSITION_4_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_4_IRQ_TYPE "NONE"
+#define POSITION_4_NAME "/dev/position_4"
+#define POSITION_4_RESET_VALUE 0
+#define POSITION_4_SPAN 16
+#define POSITION_4_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_5 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_5 altera_avalon_pio
+#define POSITION_5_BASE 0x150
+#define POSITION_5_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_5_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_5_CAPTURE 0
+#define POSITION_5_DATA_WIDTH 32
+#define POSITION_5_DO_TEST_BENCH_WIRING 0
+#define POSITION_5_DRIVEN_SIM_VALUE 0
+#define POSITION_5_EDGE_TYPE "NONE"
+#define POSITION_5_FREQ 50000000
+#define POSITION_5_HAS_IN 0
+#define POSITION_5_HAS_OUT 1
+#define POSITION_5_HAS_TRI 0
+#define POSITION_5_IRQ -1
+#define POSITION_5_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_5_IRQ_TYPE "NONE"
+#define POSITION_5_NAME "/dev/position_5"
+#define POSITION_5_RESET_VALUE 0
+#define POSITION_5_SPAN 16
+#define POSITION_5_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_6 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_6 altera_avalon_pio
+#define POSITION_6_BASE 0x140
+#define POSITION_6_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_6_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_6_CAPTURE 0
+#define POSITION_6_DATA_WIDTH 32
+#define POSITION_6_DO_TEST_BENCH_WIRING 0
+#define POSITION_6_DRIVEN_SIM_VALUE 0
+#define POSITION_6_EDGE_TYPE "NONE"
+#define POSITION_6_FREQ 50000000
+#define POSITION_6_HAS_IN 0
+#define POSITION_6_HAS_OUT 1
+#define POSITION_6_HAS_TRI 0
+#define POSITION_6_IRQ -1
+#define POSITION_6_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_6_IRQ_TYPE "NONE"
+#define POSITION_6_NAME "/dev/position_6"
+#define POSITION_6_RESET_VALUE 0
+#define POSITION_6_SPAN 16
+#define POSITION_6_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_7 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_7 altera_avalon_pio
+#define POSITION_7_BASE 0x130
+#define POSITION_7_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_7_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_7_CAPTURE 0
+#define POSITION_7_DATA_WIDTH 32
+#define POSITION_7_DO_TEST_BENCH_WIRING 0
+#define POSITION_7_DRIVEN_SIM_VALUE 0
+#define POSITION_7_EDGE_TYPE "NONE"
+#define POSITION_7_FREQ 50000000
+#define POSITION_7_HAS_IN 0
+#define POSITION_7_HAS_OUT 1
+#define POSITION_7_HAS_TRI 0
+#define POSITION_7_IRQ -1
+#define POSITION_7_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_7_IRQ_TYPE "NONE"
+#define POSITION_7_NAME "/dev/position_7"
+#define POSITION_7_RESET_VALUE 0
+#define POSITION_7_SPAN 16
+#define POSITION_7_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_8 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_8 altera_avalon_pio
+#define POSITION_8_BASE 0x120
+#define POSITION_8_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_8_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_8_CAPTURE 0
+#define POSITION_8_DATA_WIDTH 32
+#define POSITION_8_DO_TEST_BENCH_WIRING 0
+#define POSITION_8_DRIVEN_SIM_VALUE 0
+#define POSITION_8_EDGE_TYPE "NONE"
+#define POSITION_8_FREQ 50000000
+#define POSITION_8_HAS_IN 0
+#define POSITION_8_HAS_OUT 1
+#define POSITION_8_HAS_TRI 0
+#define POSITION_8_IRQ -1
+#define POSITION_8_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_8_IRQ_TYPE "NONE"
+#define POSITION_8_NAME "/dev/position_8"
+#define POSITION_8_RESET_VALUE 0
+#define POSITION_8_SPAN 16
+#define POSITION_8_TYPE "altera_avalon_pio"
+
+
+/*
+ * position_9 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_position_9 altera_avalon_pio
+#define POSITION_9_BASE 0x110
+#define POSITION_9_BIT_CLEARING_EDGE_REGISTER 0
+#define POSITION_9_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define POSITION_9_CAPTURE 0
+#define POSITION_9_DATA_WIDTH 32
+#define POSITION_9_DO_TEST_BENCH_WIRING 0
+#define POSITION_9_DRIVEN_SIM_VALUE 0
+#define POSITION_9_EDGE_TYPE "NONE"
+#define POSITION_9_FREQ 50000000
+#define POSITION_9_HAS_IN 0
+#define POSITION_9_HAS_OUT 1
+#define POSITION_9_HAS_TRI 0
+#define POSITION_9_IRQ -1
+#define POSITION_9_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define POSITION_9_IRQ_TYPE "NONE"
+#define POSITION_9_NAME "/dev/position_9"
+#define POSITION_9_RESET_VALUE 0
+#define POSITION_9_SPAN 16
+#define POSITION_9_TYPE "altera_avalon_pio"
+
+
+/*
+ * sdram configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_sdram altera_avalon_new_sdram_controller
+#define SDRAM_BASE 0x10000000
+#define SDRAM_CAS_LATENCY 3
+#define SDRAM_CONTENTS_INFO
+#define SDRAM_INIT_NOP_DELAY 0.0
+#define SDRAM_INIT_REFRESH_COMMANDS 2
+#define SDRAM_IRQ -1
+#define SDRAM_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define SDRAM_IS_INITIALIZED 1
+#define SDRAM_NAME "/dev/sdram"
+#define SDRAM_POWERUP_DELAY 200.0
+#define SDRAM_REFRESH_PERIOD 7.8125
+#define SDRAM_REGISTER_DATA_IN 1
+#define SDRAM_SDRAM_ADDR_WIDTH 0x19
+#define SDRAM_SDRAM_BANK_WIDTH 2
+#define SDRAM_SDRAM_COL_WIDTH 10
+#define SDRAM_SDRAM_DATA_WIDTH 32
+#define SDRAM_SDRAM_NUM_BANKS 4
+#define SDRAM_SDRAM_NUM_CHIPSELECTS 1
+#define SDRAM_SDRAM_ROW_WIDTH 13
+#define SDRAM_SHARED_DATA 0
+#define SDRAM_SIM_MODEL_BASE 0
+#define SDRAM_SPAN 134217728
+#define SDRAM_STARVATION_INDICATOR 0
+#define SDRAM_TRISTATE_BRIDGE_SLAVE ""
+#define SDRAM_TYPE "altera_avalon_new_sdram_controller"
+#define SDRAM_T_AC 5.5
+#define SDRAM_T_MRD 3
+#define SDRAM_T_RCD 20.0
+#define SDRAM_T_RFC 70.0
+#define SDRAM_T_RP 20.0
+#define SDRAM_T_WR 14.0
+
+
+/*
+ * sdram_pll configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_sdram_pll altpll
+#define SDRAM_PLL_BASE 0x320
+#define SDRAM_PLL_IRQ -1
+#define SDRAM_PLL_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define SDRAM_PLL_NAME "/dev/sdram_pll"
+#define SDRAM_PLL_SPAN 16
+#define SDRAM_PLL_TYPE "altpll"
+
+
+/*
+ * sysid_qsys_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_sysid_qsys_0 altera_avalon_sysid_qsys
+#define SYSID_QSYS_0_BASE 0x338
+#define SYSID_QSYS_0_ID 0
+#define SYSID_QSYS_0_IRQ -1
+#define SYSID_QSYS_0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define SYSID_QSYS_0_NAME "/dev/sysid_qsys_0"
+#define SYSID_QSYS_0_SPAN 8
+#define SYSID_QSYS_0_TIMESTAMP 1608980315
+#define SYSID_QSYS_0_TYPE "altera_avalon_sysid_qsys"
+
+#endif /* __SYSTEM_H_ */

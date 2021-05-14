@@ -1,0 +1,99 @@
+module KeepSocre(
+								input Clk, 
+								input logic [9:0] DrawX, DrawY,
+								input logic big1_catch  ,           //big1_catch=1 means this gold be caught, add
+								output logic is_score
+								
+);
+logic total_score[19:0];
+logic [19:0]read_address;
+assign tatal_score=20'd0;
+assign [3:0]num_p5,num_p4,num_p3,num_p2,num_p1;
+
+always_ff @(posedge Clk) begin
+	num_p5<=(tatal_score/10000)[3:0];
+	num_p4<=(tatal_score/1000)[3:0];
+	num_p3<=(tatal_score/100)[3:0];
+	num_p2<=(tatal_score/10)[3:0];
+	num_p1<=(tatal_score/)[3:0];
+	if (big1_catch==1)
+		total_score<=total_score+19'd500;
+	else
+		total_score<=total_score;
+end
+//////////////////////////////////////////////
+always_comb begin
+if (DrawY>=10d'15 && DraWY<=10'd30 && DrawX<=10'd109 && DrawX>=10'd30)begin
+	if (DrawX>=10'd15 && DrawX<=10'd22)
+		read_address=(DrawX-10'd15)+8*(DrawY-10'd15)+1280；
+	if (DrawX>=10'd26 && DrawX<=10'd33)
+		read_address=(DrawX-10'd26)+8*(DrawY-10'd15)+1280+128；
+	if (DrawX>=10'd37 && DrawX<=10'd44)
+		read_address=(DrawX-10'd37)+8*(DrawY-10'd15)+1280+128*2；
+	if (DrawX>=10'd48 && DrawX<=10'd55)
+		read_address=(DrawX-10'd48)+8*(DrawY-10'd15)+1280+128*3；
+	if (DrawX>=10'd59 && DrawX<=10'd66)
+		read_address=(DrawX-10'd59)+8*(DrawY-10'd15)+1280+128*4； // here draw SCORE
+	if (DrawX>=10'd73 && DrawX<=10'd80)
+		read_address=(DrawX-10'd73)+8*(DrawY-10'd15)+128*num_p5;
+	if ((DrawX>=10'd84 && DrawX<=10'd91)
+		read_address=(DrawX-10'd84)+8*(DrawY-10'd15)+128*num_p4;
+	if ((DrawX>=10'd95 && DrawX<=10'd102)
+		read_address=(DrawX-10'd95)+8*(DrawY-10'd15)+128*num_p3;
+	if ((DrawX>=10'd106 && DrawX<=10'd113)
+		read_address=(DrawX-10'd106)+8*(DrawY-10'd15)+128*num_p2;
+	if ((DrawX>=10'd117 && DrawX<=10'd124)
+		read_address=(DrawX-10'd117)+8*(DrawY-10'd15)+128*num_p1;  // here 5 number from msb to lsb
+	else 
+		read_address=0;
+end
+	else
+		read_address=0;
+	
+
+
+
+
+
+end
+////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+hook_rom rom(.read_address(read_address) ,.clk(Clk),    .is_score(is_score));
+
+
+
+endmodule
+
+module font_rom(input logic [18:0] read_address,
+					input logic clk,
+					output is_score);
+					
+logic memory[1280];
+initial
+begin
+	 $readmemh("sprite/font.txt", memory);
+end
+
+
+
+always_ff @ (posedge clk) begin
+	is_score<= memory[read_address];
+end
+			
+					
+					
+					
+					
+endmodule

@@ -1,0 +1,100 @@
+module single(
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+);
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////	 
+hook hook_instance(
+
+							.Clk(Clk), 
+							.reset(Reset_h),
+							 .DrawX(DrawX), 
+							 .DrawY(DrawY),
+							.is_hook(is_hook),
+							.hook_index(hook_index),
+							.is_string(is_string),
+							.extend(player1_want_catch),
+							.is_back(is_back),
+							.is_bound(is_bound),
+							.string_taily(string_taily),
+							.string_tailx(string_tailx),
+							.R_mode(R_mode),
+							.state_out(state_out),
+							.is_catch1(is_catch1),
+							.is_catch2(is_catch2),							
+							.destroy1(destroy_big_gold_instance1),
+							.destroy2(destroy_big_gold_instance2)
+						
+
+);
+
+///////////////////////////////////////////////////////////////////////	 
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////	 
+big_gold big_gold_instance1(
+								.Clk(Clk), 
+								.DrawX(DrawX), 
+								.DrawY(DrawY),
+								.goldx(goldx1),
+								.goldy(goldy1),
+								.is_big_gold(is_big_gold1),
+								.big_gold_index(big_gold_index1),
+								.tailx(string_tailx),
+								.taily(string_taily),
+								.reset(Reset_h),
+								.R_mode(R_mode),
+								.state_out(state_out),
+								.destroy(destroy_big_gold_instance1),
+								.is_catch(is_catch1),
+							
+								.State_gold_out(State_gold_out),
+								.is_new_game_start(display_random)
+);
+
+///////////////////////////////////////////////////////////////////////	 
+
+
+
+
+///////////////////////////////////////////////////////////////////////	 
+big_gold big_gold_instance2(
+								.Clk(Clk), 
+								.DrawX(DrawX), 
+								.DrawY(DrawY),
+								.goldx(goldx2),
+								.goldy(goldy2),
+								.is_big_gold(is_big_gold2),
+								.big_gold_index(big_gold_index2),
+								.tailx(string_tailx),
+								.taily(string_taily),
+								.reset(Reset_h),
+								.R_mode(R_mode),
+								.state_out(state_out),
+								.destroy(destroy_big_gold_instance2),
+								.is_catch(is_catch2),
+								.is_new_game_start(display_random)
+);
+
+///////////////////////////////////////////////////////////////////////	 

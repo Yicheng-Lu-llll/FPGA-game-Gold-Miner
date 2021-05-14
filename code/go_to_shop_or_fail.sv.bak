@@ -1,0 +1,12 @@
+module go_to_shop_or_fail(
+								input Clk, 
+								input logic [9:0] DrawX, DrawY,
+								input logic is_fail,
+								output logic is_,
+								output logic[3:0] background_game_index
+
+
+
+
+
+);
