@@ -1,4 +1,4 @@
 # game-Gold-Miner-
-language:System Verilog.
-device: FPGA. 
-For more infomation, please read the report.pdf
+language:System Verilog. <br>
+device: FPGA.  <br>
+For more infomation, please read the report.pdf <br>
