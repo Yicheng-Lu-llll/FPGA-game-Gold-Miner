@@ -2,4 +2,5 @@
 language:    System Verilog. <br>
 device:      FPGA.  <br>
 For more infomation, please read the report.pdf <br>
-[![Watch the video]([![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY))
+[![Watch the video](https://i9.ytimg.com/vi/6PJbOnOO6CQ/mq1.jpg?sqp=CIDIhY4G&rs=AOn4CLDAapgwOPdlcxhi6vv8OYEKSzkDrg)](https://www.youtube.com/watch?v=6PJbOnOO6CQ)
+
